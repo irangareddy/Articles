@@ -2,14 +2,13 @@
 
  Carousels are a great way to showcase different features of a product, advertise multiple products at once, or tell your brand story in chapters.
 
-### What is a Carousel?
+## What is a Carousel
 
 A carousel is a Pin with multiple images and has a related short description for each image repectively which helps to convey context easily.
 
 People see the carousel in their home feed just like any other Pin. They can swipe through the different images (or cards) directly from the feed. Or, they can tap on the Carousel and swipe through each card and its corresponding site, essentially swiping through the different landing pages.
 
-### Let's Build a Carousels like this:
-
+### Let's Build a Carousels like this
 
 <p align="center">
 <a href="https://github.com/irangareddy/Flutter-UI-Components-Library/blob/master/lib/material/carouselCardsList.dart">
@@ -231,15 +230,15 @@ class _CarouselListState extends State<CarouselList> {
 
  We have successfully created a `CarouselCard` but we need to create a `List` before we actually witness the `Coursels`
 
--  Create a `Stateful Widget` and name it as `CourselList`.(You will shortly know, why we are created a StatefulWidget)
+- Create a `Stateful Widget` and name it as `CourselList`.(You will shortly know, why we are created a StatefulWidget)
 
-- Create a `Container` and give a `height > CarouselCard height` and `width = double.infinity` because, we know the `height` of the Card but don't know how much `width` occupies for list of the `Cards` 
+- Create a `Container` and give a `height > CarouselCard height` and `width = double.infinity` because, we know the `height` of the Card but don't know how much `width` occupies for list of the `Cards`
 
 - Here comes the important area `child` property, we are declaring a `PageView`
 
 **Important**: About PageView(Skip if you know)
 
-- A `PageView` is almost like Lists but, it works page by page. I am using this to build Horizontal List. 
+- A `PageView` is almost like Lists but, it works page by page. I am using this to build Horizontal List.
 
 - Each child of a page view is forced to be the same size as the `viewport`.
 
@@ -247,23 +246,21 @@ class _CarouselListState extends State<CarouselList> {
 
 - The `PageController` can also be used to control the `PageController.initialPage`, which determines which page is shown when the PageView is first constructed, and the `PageController.viewportFraction`, which determines the size of the pages as a fraction of the viewport size.
 
-
 *source: [Flutter API Docs](https://api.flutter.dev/flutter/widgets/PageView-class.html)*
 
 These points give a clear idea of the PageView. I used this lines exactly form Docs because they are best.
 
 Hope you got a exact idea of `PageView`
 
-**Back to Building the Carousel**
+### Back to Building the Carousel
 
 - With `itembuilder` property we are returning the `cards` of the list using `index` value
 - Assign the array length to `itemCount`
 - `controller` which manages view of the `PageView` using `PageViewController` and assign `initialPage` to `0`(starting point), `viewportFraction` is default set to 1 i.e, each card occupies whole view. Change the  `viewportFraction` to adjust the view.
 - create a `currentPage` variable to know the current page of the PageView and update the value in `onPageChanged` property
-- If you cleary observe the code we have an unimplemented `updateIndicators()` function 
+- If you cleary observe the code we have an unimplemented `updateIndicators()` function
 
-**Adding Indicators**
-
+### Adding Indicators
 
 ```dart
   Widget updateIndicators() {
@@ -290,13 +287,12 @@ Hope you got a exact idea of `PageView`
 
 This a Indicators widget which helps users to know *where they are* and *Total count of the Cards*
 
-**Conclusion**
+### Conclusion
 
 Carousels convey context very fast and easy way to stick users with images and make advertise. Your can further extend this as Navigative ech card respective view and describing more about the context.
-
 
 [GitHub Link](https://github.com/irangareddy/Flutter-UI-Components-Library/blob/master/lib/material/carouselCardsList.dart)
 
 If you like to improve your App Development Skills, even more in Flutter and SwiftUI. Feel free to dm me on [Instagram](https://www.instagram.com/irangareddy/)  or tweet to me on [Twitter](https://twitter.com/irangareddy) if you have any additional tips or feedback.
 
-Thanks for reading! 
+Thanks for reading!

@@ -1,0 +1,13 @@
+- `pwd` - (path working directory) shows you in what directory you are
+- `ls` - (list files in current pwd) this one is probably the most useful one. There are many ways to customize it (with flags), the most common for me might be `ls -lha` which means, list all the files (including the hidden ones) in a column and add info about them (size, etc in human readable form).
+- `cat` - displays/outputs the contents of the file. It is useful for reading a file very quickly, but if the file is long you might want to do `head` or `tail` which only displays the first or last lines of the file.
+- `man` - (manual) do man and some command to get the manual for that command. Very useful to know the specific flags for certain commands.
+- `cd` - change directory. You can also do `cd ...` to move one up or `cd ../..` to move two up (etc).
+- `clear` - clears the terminal screen.
+ - `cd` - goest to last path.
+- `~` - goes to home directory.
+- `df -h` - displays free disk space.
+- `du -sh` - displays disk usage (the flag s is for summarized form).
+- `du -sh *` - displays the disk usage for every folder or file in that location.
+- Another option is to do `du -s * | sort -n` which will sort the results based on the size from smallest to largest.
+- arrow up or arrow down, brings up the last commands. Space bar to go to next page.

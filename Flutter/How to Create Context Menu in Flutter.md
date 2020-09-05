@@ -1,14 +1,14 @@
 
-# How to Create Context Menu in Flutter?
+# How to Create Context Menu in Flutter
 
 Context Menu's most widely used UI Component in Mobile Development and with Flutter we can build it much more easily but, let's look at what is Contextual Menu is? (Contextual/Context referred as same)⁣
 
-### What is a Contextual Menu?⁣
+## What is a Contextual Menu
 
  A contextual menu is a type of menu that appears on demand and contains a small set of relevant actions related to a control, an area of the interface, a piece of data in the application, or a view of the application.⁣
 ⁣
-## Let's Build a Context Menu like this:
 
+## Let's Build a Context Menu like this
 
 <p align="center">
 <a href="https://github.com/irangareddy/Flutter-UI-Components-Library/blob/master/lib/material/contextMenu.dart">
@@ -16,7 +16,7 @@ Context Menu's most widely used UI Component in Mobile Development and with Flut
 </a>
 </p>
 
-
+This is actually what we going to make by the end of this article. Load up your energy and let's get started.
 
 ### Create a List
 
@@ -27,9 +27,11 @@ const List<String> choices = <String>[
 "Item 3",
 ];
 ```
+
 The choices are a list of  String that represents the items in the Context Menu.
 
-### Create a Stateful Widget 
+### Create a Stateful Widget
+
 ```dart
 class MainScreen extends StatefulWidget {
   @override
@@ -46,6 +48,7 @@ class _MainScreenState extends State<MainScreen> {
   }
 }
 ```
+
 MainScreen is a Stateful widget that manages the state of the context menu selection.
 
 ### Add these Variabes to _MainScreenState
@@ -54,12 +57,13 @@ MainScreen is a Stateful widget that manages the state of the context menu selec
   final GlobalKey<ScaffoldState> _scaffoldkey = new GlobalKey<ScaffoldState>();
   String _selectedChoices;
 ```
+
 - `_scaffoldKey` is a GlobalKey that provides access to ScaffoldState and this helps identify the state uniquely.
 - selected `choices` is a  String to store the current choice.
 
-```
+`
 Note: underscore before a variable refers as a private  variable in dart
-```
+`
 
 ### Adding Context Menu to the MainScreen
 
@@ -94,8 +98,9 @@ Note: underscore before a variable refers as a private  variable in dart
   }
 ```
 
-we need to manage three things while adding the Context Menu 
-1.  Assign the `_scaffoldkey` to the `key` property in the Scaffold.
+we need to manage three things while adding the Context Menu
+
+1. Assign the `_scaffoldkey` to the `key` property in the Scaffold.
 2. [Actions in AppBar](#Actions-in-AppBar)
 3. [Body Content in MainScreen](#Body-Content-in-MainScreen)
 
@@ -115,6 +120,7 @@ we need to manage three things while adding the Context Menu
     showSnackBar(choice);
   }
 ```
+
 `_select` is a function that will be called from `onSelected` property of the `PopupMenuButton` which stores the choice of the user to a `_selectedChoices` and call's the `snowSnackBar`
 
 ```dart
@@ -152,8 +158,8 @@ class BodyWidget extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
-        _selection != null ? 
-        Center(child: Text("Selected: $_selection",style: kBodyTextStyle,),) : 
+        _selection != null ?
+        Center(child: Text("Selected: $_selection",style: kBodyTextStyle,),) :
         Center(child: Text("Welcome to Flutter UI Components Library",style: kBodyTextStyle,),),
       ],
     );
@@ -161,8 +167,7 @@ class BodyWidget extends StatelessWidget {
 }
 ```
 
-`BodyWidget` is a StatelessWidget class which accepts the `_selection` of the context menu and displays the current selection of the conext menu if `_selection` is null then display the sample text. 
-
+`BodyWidget` is a StatelessWidget class which accepts the `_selection` of the context menu and displays the current selection of the conext menu if `_selection` is null then display the sample text.
 
 ### Conclusion
 
@@ -172,4 +177,4 @@ Adding Context Menu to the Application gives more flexbility to the user for sma
 
 If you like to improve your App Development Skills, even more in Flutter and SwiftUI. Feel free to dm me on [Instagram](https://www.instagram.com/irangareddy/)  or tweet to me on [Twitter](https://twitter.com/irangareddy) if you have any additional tips or feedback.
 
-Thanks for reading! 
+Thanks for reading!

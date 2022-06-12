@@ -93,11 +93,7 @@ class _LifeCycleState extends State<LifeCycle> with WidgetsBindingObserver {
 
 <p align="top">
 <p>Here’s how the app will look when you’re done:</p>
-<img src="images/StarterAppCycle.png" width="150" alt="Starter"></a>
-</p>
-
-
-<p>
+<img src="images/StarterAppCycle.png" width="250" alt="Starter"></a>
 <img src="images/InitState.png" width="250" alt="Starter" >
 </a>
 <figcaption>Starter Project<figcaption>
